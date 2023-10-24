@@ -51,6 +51,8 @@ const tourSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now(),
+    // disabling createdAt from being return to the client.
+    select: false,
   },
   startDates: [Date],
 });

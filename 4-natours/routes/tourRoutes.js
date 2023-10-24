@@ -7,7 +7,11 @@ const {
   getTour,
   updateTour,
   deleteTour,
+  aliasTours,
 } = require('../controllers/tourController');
+
+// Alias routes
+router.route('/top-5-cheap').get(aliasTours, getAllTours);
 
 // new route method of handling route functionality
 router.route('/').get(getAllTours).post(createTour);
